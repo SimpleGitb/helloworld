@@ -1,2 +1,118 @@
-<h1>hello</h1>
-<p>你好网站</p>
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>安全验证页面</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/Safverification.css"/>
+		<link rel="stylesheet" type="text/css" href="css/prism.css"/>
+  </head>
+  <body >
+  	<div class="alert alert-warning">
+		    <a href="#" class="close" data-dismiss="alert">
+		        &times;
+		    </a>
+		    <strong>警告！</strong>本次请求失败，请稍后再试！
+		</div>
+    <nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" >
+	        <img alt="Brand" src="img/u144.png">
+	      </a>
+	      <a class="navbar-brand" style="padding-top: 0;font-size: 15px;font-family: '微软雅黑';font-style: normal;font-weight: 700;color: #FFFFFF;padding-left: 10px;">
+	        云悉监测验证工具
+	      </a>
+	    </div>
+	    <div class="navbar-return">
+	    	<a href="#">
+	    		<img src="img/u9213.png"/>
+	    		<p>返回上一页</p>
+	    	</a>
+	    </div>
+	  </div>
+	</nav>
+	<div class="main">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-ld-12">
+					<div class="input-group">
+				      <input type="text" class="form-control btnquery" placeholder="请输入查询网址，格式：http://www.abc.com">
+				      <span class="input-group-btn">
+				        <button class="btn btn-default" type="button" onclick="webQuery()">查 询</button>
+				      </span>
+				  </div>
+				  <a onclick="configuration()"><span class="color">*</span> 高级配置</a>
+				</div>
+				<div class="col-ld-12 serach">
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">参照格式</span>
+					  <input list="test1" type="text" class="form-control selectval1" onchange="selectval1()">
+						<datalist id="test1">
+						    <option value="https://www.baidu.com"></option>
+						    <option value="https://www.baidu.com"></option>
+						</datalist>
+					</div>
+				</div>
+				<div class="col-ld-12 serach">
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">用户代理</span>
+					  <input list="test2" type="text" class="form-control selectval2" onchange="selectval2()">
+						<datalist id="test2">
+						    <option value="001"></option>
+						    <option value="002"></option>
+						</datalist>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container-fluid main2">
+			<div class="content">
+				<span>关键字：</span> 
+				<div class="input-group">
+		      <input type="text" class="form-control" placeholder="请输入关键字">
+		      <span class="input-group-btn">
+		        <button class="btn btn-default" type="button">搜 索</button>
+		      </span>
+				</div>
+				<div class="clear"></div>
+				<ul id="myTab" class="nav nav-tabs">
+					<li class="active">
+						<a href="#tab1" data-toggle="tab">源码</a>
+					</li>
+					<li><a href="#tab2" data-toggle="tab">预览</a></li>
+					<li><a href="#tab3" data-toggle="tab">响应头</a></li>
+				</ul>
+				<div id="myTabContent" class="tab-content">
+					<div class="tab-pane fade in active" id="tab1">
+						<p><span style="visibility: hidden;">5</span>
+							 <pre> 
+								<code class="language-markup">
+									 
+								</code>
+							</pre>
+						</p>
+					</div>
+					<div class="tab-pane fade" id="tab2">
+						<p>
+							<iframe src="" frameborder="no" border="0" width="100%" height="650px" name="myframe" id="myframe"></iframe>
+						</p>
+					</div>
+					<div class="tab-pane fade" id="tab3">
+						<p style="word-break:  break-all;text-align: left;padding: 10px 20px;"></p>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/verificaton.js"></script>
+    
+  </body>
+</html>
